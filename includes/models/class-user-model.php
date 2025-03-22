@@ -11,6 +11,8 @@ class User {
 
         if ( is_wp_error( $user_id ) ) {
             wp_die( $user_id->get_error_message() );
+        } else {
+            echo '<p>' . __( 'Registration Successful', 'subscription-and-membership' ) . '</p>';
         }
 
         return $user_id;
